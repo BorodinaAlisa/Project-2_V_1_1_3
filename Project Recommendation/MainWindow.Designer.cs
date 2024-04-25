@@ -130,6 +130,7 @@
             resources.ApplyResources(EstimateButton, "EstimateButton");
             EstimateButton.Name = "EstimateButton";
             EstimateButton.UseVisualStyleBackColor = true;
+            EstimateButton.Click += EstimateButton_Click;
             // 
             // RealtyPhoto
             // 

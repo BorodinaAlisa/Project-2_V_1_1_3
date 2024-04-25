@@ -10,7 +10,11 @@ namespace RecommendationProject2
         [Test]
         public void AvailabilityDB() //Наличие БД
         {
-            Assert.That(File.Exists("ProectDB2.db"), Is.True);
+            using (var context = new TestDBContext())
+            {
+                context.ApplicationContext();
+                Assert.That(File.Exists("ProectDB2.db"), Is.True);
+            }
         }
         [Test]
         public void InputDataInDb() // Ввод данных и их вывод

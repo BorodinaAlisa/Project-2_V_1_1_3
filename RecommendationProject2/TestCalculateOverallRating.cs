@@ -39,6 +39,7 @@ namespace UnitTestRecommendationProject
                     Square = 250,
                     Floor = 2,
                     Rooms = 5,
+                    Mark = 5,
                     City = "c. Зеленое",
                     Type = "Квартира",
                     ForWhat = "Купить",
@@ -48,7 +49,7 @@ namespace UnitTestRecommendationProject
                 GetRecommendation getRecommendation = new GetRecommendation(listR);
                 MainWindow mainWindow = new MainWindow();
                 var testValue = mainWindow.CalculateOverallRating(getRecommendation, newRealrt3);
-                Assert.That(testValue == 0.7485714285714285714285714286M, Is.True);
+                Assert.That(testValue == 0.78M, Is.True);
 
             }
         }

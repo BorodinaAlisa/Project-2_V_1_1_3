@@ -6,7 +6,7 @@ namespace design
     {
         string? Email { get; set; }
         public int I { get; set; }
-        int IdRealryForFav { get; set; }
+        int IdRealryForFavBlMark { get; set; }
         Dictionary<int, decimal>? DictRecom { get; set; }
         public MainWindow()
         {
@@ -73,7 +73,7 @@ namespace design
                         PriceText.Text = existingRealty.Price.ToString();
                         FloorText.Text = existingRealty.Floor.ToString();
                         SquareText.Text = existingRealty.Square.ToString();
-                        IdRealryForFav = existingRealty.Id;
+                        IdRealryForFavBlMark = existingRealty.Id;
                     }
                 }
             }
@@ -83,7 +83,7 @@ namespace design
 
             decimal comparisonPrice = getRecommendation.RatingPrice > existingRealty.Price
                 ? (existingRealty.Price / getRecommendation.RatingPrice) : (getRecommendation.RatingPrice / existingRealty.Price);
-            decimal comparisonFloor = getRecommendation.RatingFloоr > existingRealty.Floor 
+            decimal comparisonFloor = getRecommendation.RatingFloоr > existingRealty.Floor
                 ? (existingRealty.Floor / getRecommendation.RatingFloоr) : (getRecommendation.RatingFloоr / existingRealty.Floor);
             decimal comparisonSquare = getRecommendation.RatingSquare > existingRealty.Square
                 ? (existingRealty.Square / getRecommendation.RatingPrice) : (getRecommendation.RatingSquare / existingRealty.Square);
@@ -94,7 +94,7 @@ namespace design
             int comparisonForWgat = getRecommendation.RatingForWhat == existingRealty.ForWhat ? (1) : (0);
 
             decimal overallRating = (comparisonPrice + comparisonFloor + comparisonSquare + comparisonRooms + comparisonCity
-                + comparisonType + comparisonForWgat) / 7;
+                + comparisonType + comparisonForWgat + (existingRealty.Mark / 5)) / 8;
             return overallRating;
         }
         public void Design()
@@ -214,7 +214,7 @@ namespace design
         {
             if (DictRecom != null)
             {
-                var favourites = new Favorite(IdRealryForFav);
+                var favourites = new Favorite(IdRealryForFavBlMark);
             }
         }
 
@@ -222,7 +222,7 @@ namespace design
         {
             if (DictRecom != null)
             {
-                var favourites = new BlackList(IdRealryForFav);
+                var favourites = new BlackList(IdRealryForFavBlMark);
             }
         }
 
@@ -230,6 +230,15 @@ namespace design
         {
             var blackList = new BlackList();
             blackList.Show();
+        }
+
+        private void EstimateButton_Click(object sender, EventArgs e)
+        {
+            if (DictRecom != null)
+            {
+                var mark = new MarkWindow(IdRealryForFavBlMark);
+                mark.Show();
+            }
         }
     }
 }

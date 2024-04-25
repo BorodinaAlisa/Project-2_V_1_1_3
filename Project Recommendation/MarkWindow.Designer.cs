@@ -29,87 +29,98 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarkWindow));
-            this.Picture9 = new System.Windows.Forms.PictureBox();
-            this.Star1 = new System.Windows.Forms.Button();
-            this.Star2 = new System.Windows.Forms.Button();
-            this.Star3 = new System.Windows.Forms.Button();
-            this.Star4 = new System.Windows.Forms.Button();
-            this.Star5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Picture9)).BeginInit();
-            this.SuspendLayout();
+            Picture9 = new PictureBox();
+            Star1 = new Button();
+            Star2 = new Button();
+            Star3 = new Button();
+            Star4 = new Button();
+            Star5 = new Button();
+            ((System.ComponentModel.ISupportInitialize)Picture9).BeginInit();
+            SuspendLayout();
             // 
             // Picture9
             // 
-            this.Picture9.Image = ((System.Drawing.Image)(resources.GetObject("Picture9.Image")));
-            this.Picture9.Location = new System.Drawing.Point(-1, -1);
-            this.Picture9.Name = "Picture9";
-            this.Picture9.Size = new System.Drawing.Size(801, 363);
-            this.Picture9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Picture9.TabIndex = 0;
-            this.Picture9.TabStop = false;
+            Picture9.Image = (Image)resources.GetObject("Picture9.Image");
+            Picture9.Location = new Point(-1, -1);
+            Picture9.Margin = new Padding(3, 4, 3, 4);
+            Picture9.Name = "Picture9";
+            Picture9.Size = new Size(801, 454);
+            Picture9.SizeMode = PictureBoxSizeMode.StretchImage;
+            Picture9.TabIndex = 0;
+            Picture9.TabStop = false;
             // 
             // Star1
             // 
-            this.Star1.Location = new System.Drawing.Point(67, 161);
-            this.Star1.Name = "Star1";
-            this.Star1.Size = new System.Drawing.Size(100, 100);
-            this.Star1.TabIndex = 1;
-            this.Star1.Text = "button1";
-            this.Star1.UseVisualStyleBackColor = true;
+            Star1.Location = new Point(67, 201);
+            Star1.Margin = new Padding(3, 4, 3, 4);
+            Star1.Name = "Star1";
+            Star1.Size = new Size(100, 125);
+            Star1.TabIndex = 1;
+            Star1.Text = "button1";
+            Star1.UseVisualStyleBackColor = true;
+            Star1.Click += Star1_Click;
             // 
             // Star2
             // 
-            this.Star2.Location = new System.Drawing.Point(208, 161);
-            this.Star2.Name = "Star2";
-            this.Star2.Size = new System.Drawing.Size(100, 100);
-            this.Star2.TabIndex = 2;
-            this.Star2.Text = "button2";
-            this.Star2.UseVisualStyleBackColor = true;
+            Star2.Location = new Point(208, 201);
+            Star2.Margin = new Padding(3, 4, 3, 4);
+            Star2.Name = "Star2";
+            Star2.Size = new Size(100, 125);
+            Star2.TabIndex = 2;
+            Star2.Text = "button2";
+            Star2.UseVisualStyleBackColor = true;
+            Star2.Click += Star2_Click;
             // 
             // Star3
             // 
-            this.Star3.Location = new System.Drawing.Point(354, 161);
-            this.Star3.Name = "Star3";
-            this.Star3.Size = new System.Drawing.Size(100, 100);
-            this.Star3.TabIndex = 3;
-            this.Star3.Text = "button3";
-            this.Star3.UseVisualStyleBackColor = true;
+            Star3.Location = new Point(354, 201);
+            Star3.Margin = new Padding(3, 4, 3, 4);
+            Star3.Name = "Star3";
+            Star3.Size = new Size(100, 125);
+            Star3.TabIndex = 3;
+            Star3.Text = "button3";
+            Star3.UseVisualStyleBackColor = true;
+            Star3.Click += Star3_Click;
             // 
             // Star4
             // 
-            this.Star4.Location = new System.Drawing.Point(495, 161);
-            this.Star4.Name = "Star4";
-            this.Star4.Size = new System.Drawing.Size(100, 100);
-            this.Star4.TabIndex = 4;
-            this.Star4.Text = "button4";
-            this.Star4.UseVisualStyleBackColor = true;
+            Star4.Location = new Point(495, 201);
+            Star4.Margin = new Padding(3, 4, 3, 4);
+            Star4.Name = "Star4";
+            Star4.Size = new Size(100, 125);
+            Star4.TabIndex = 4;
+            Star4.Text = "button4";
+            Star4.UseVisualStyleBackColor = true;
+            Star4.Click += Star4_Click;
             // 
             // Star5
             // 
-            this.Star5.Location = new System.Drawing.Point(633, 161);
-            this.Star5.Name = "Star5";
-            this.Star5.Size = new System.Drawing.Size(100, 100);
-            this.Star5.TabIndex = 5;
-            this.Star5.Text = "button5";
-            this.Star5.UseVisualStyleBackColor = true;
+            Star5.Location = new Point(633, 201);
+            Star5.Margin = new Padding(3, 4, 3, 4);
+            Star5.Name = "Star5";
+            Star5.Size = new Size(100, 125);
+            Star5.TabIndex = 5;
+            Star5.Text = "button5";
+            Star5.UseVisualStyleBackColor = true;
+            Star5.Click += Star5_Click;
             // 
             // MarkWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 361);
-            this.Controls.Add(this.Star5);
-            this.Controls.Add(this.Star4);
-            this.Controls.Add(this.Star3);
-            this.Controls.Add(this.Star2);
-            this.Controls.Add(this.Star1);
-            this.Controls.Add(this.Picture9);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "MarkWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.Picture9)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 451);
+            Controls.Add(Star5);
+            Controls.Add(Star4);
+            Controls.Add(Star3);
+            Controls.Add(Star2);
+            Controls.Add(Star1);
+            Controls.Add(Picture9);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MarkWindow";
+            StartPosition = FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)Picture9).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
